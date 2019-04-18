@@ -26,6 +26,26 @@ public class InscripcionGimnasio {
 		System.out.println("Imprimir boxeeadores: ");
 		ent.imprimirBoxeadores();
 		
+		ent.setAnioNacimiento(1999);
+		System.out.println(ent.esMayorDeEdad());
+		box2.setAnioNacimiento(2001);
+		System.out.println(box2.esMayorDeEdad());
+		
+		
+		
+		System.out.println("------------");
+		ent.presentarse();
+		box2.setIdentificacion("123542");
+		//box3.setCategoria();
+		box2.presentarse();
+		
+		System.out.println("------------");
+		System.out.println(ent.validarNombre());
+		
+		
+		
+		
+		
 		
 		
 	}
