@@ -2,7 +2,7 @@ package edu.utn.intermedio.modelo;
 
 import java.time.LocalDate;
 
-public abstract class Persona {
+public abstract class Persona implements Comparable<Persona>{
 	
 	private String nombre;
 	private String identificacion;
@@ -29,11 +29,6 @@ public abstract class Persona {
 	public void setAnioNacimiento(int anioNacimiento) {
 		this.anioNacimiento = anioNacimiento;
 	}
-	
-	
-	
-	
-	
 	public abstract void presentarse();
 	//boxeadores y entrenador reciben este metodo pero van a modificarlo como quieran 
 	
@@ -53,12 +48,9 @@ public abstract class Persona {
 		
 		return this.getNombre().length() >8; */
 		
-		//si el nombre es nulo da falso
+		//si el nombre es nulo da falso                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 		return nombre!=null && nombre.length() >10;
 	}
-	
-	
-	
 	
 	
 }

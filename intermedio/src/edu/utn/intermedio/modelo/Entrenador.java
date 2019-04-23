@@ -1,11 +1,10 @@
 package edu.utn.intermedio.modelo;
 
 import java.util.Collection;
+import java.util.Random;
 import java.util.ArrayList;
 
-public class Entrenador extends Persona{
-	//private String nombre;
-	//ese ya esta es persona
+public class Entrenador extends Persona implements Identificable{
 	
 	
 	private Collection<Boxeador> boxeadores;
@@ -24,7 +23,10 @@ public class Entrenador extends Persona{
 	
 	public void entrenar()
 	{
-		
+		Random random= new Random();
+		for (Boxeador boxeador : boxeadores) {
+			boxeador.entrenarse(random.nextInt(30), random.nextBoolean());
+		}
 	}
 	public boolean asignarBoxeador(Boxeador b)
 	{
@@ -56,6 +58,12 @@ public class Entrenador extends Persona{
 		presentacion.append(", ").append(this.categorias [1]);
 		presentacion.append("]");
 		System.out.println(presentacion.toString());
+	}
+
+	@Override
+	public String identification() {
+		
+		return "Entrenador: " + this.getIdentificacion();
 	}
 	
 	
