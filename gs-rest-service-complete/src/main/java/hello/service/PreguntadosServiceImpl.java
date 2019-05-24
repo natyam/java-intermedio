@@ -11,40 +11,42 @@ public class PreguntadosServiceImpl implements PreguntasService{
 	
 	@Autowired
 	PreguntasMemoryDAO dao;
+	
 	@Override
 	public String getPregunta(Integer id) {
 		PreguntaRespuesta pr = dao.getPreguntaRespuesta(id);
+		
 		return pr.getPregunta();
 	}
 
 	@Override
 	public String getRespuesta(Integer id) {
 		PreguntaRespuesta pr = dao.getPreguntaRespuesta(id);
+		
 		return pr.getRespuesta();
 	}
 
 	@Override
 	public PreguntaRespuesta getPreguntaRespuesta(Integer id) {
 		PreguntaRespuesta pr = dao.getPreguntaRespuesta(id);
+		
 		return pr;
 	}
 
 	@Override
 	public Boolean addPreguntaRespuesta(PreguntaRespuesta pr) {
-		// TODO Auto-generated method stub
-		return null;
+		Integer insert = dao.insertPreguntaRespuesta(pr);
+		
+		return insert != null;
 	}
 
 	@Override
 	public Boolean removePreguntaRespuesta(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.deletePreguntaRespuesta(id);
 	}
 
 	@Override
 	public Boolean updatePreguntaRespuesta(Integer id, PreguntaRespuesta pr) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.updatePreguntaRespuesta(pr);
 	}
-	
 }

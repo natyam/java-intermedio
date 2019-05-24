@@ -7,5 +7,6 @@ public interface PreguntadosDAO {
 	public Boolean deletePreguntaRespuesta(Integer id);
 	public Boolean updatePreguntaRespuesta(PreguntaRespuesta id);
 	public PreguntaRespuesta getPreguntaRespuesta(Integer id);
+	public String getRespuesta(Integer id);
 
 }
